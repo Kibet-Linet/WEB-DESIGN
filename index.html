@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pawfect Match - Find Your Furry Friend</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1><i class="fas fa-paw"></i> Pawfect Match</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="search-section">
+        <div class="search-container">
+            <div class="search-bar">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="search-input" placeholder="Search for a dog by name or breed...">
+            </div>
+        </div>
+    </section>
+   
+    <section class="hero-section">
+        <div class="video-container">
+            <video height="300px" autoplay loop muted>
+                <source src="media/dog-running.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-text">
+            <h2>Find Your Perfect Canine Companion</h2>
+            <p>At Pawfect Match, we connect loving families with dogs in need of forever homes. Our carefully curated selection of dogs ensures you'll find the perfect match for your lifestyle and home.</p>
+            <p>Every dog deserves a loving home, and we're here to make that connection happen. Browse our available dogs and meet your new best friend today!</p>
+        </div>
+    </section>
+
+    <section id="dogs-section" class="dogs-section">
+        <h2>Available for Adoption</h2>
+        <div class="dogs-container" id="dogs-container"></div>
+    </section>
+   
+
+    <div id="adoption-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-paw"></i> Pawfect Match Adoption Form</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <form id="adoption-form">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                </div>
+                
+                <div class="dog-info-summary">
+                    <h3>Dog Information</h3>
+                    <div class="dog-details">
+                        <p><strong>Breed:</strong> <span id="modal-dog-breed">Golden Retriever</span></p>
+                        <p><strong>Age:</strong> <span id="modal-dog-age">2 years</span></p>
+                        <p><strong>Sex:</strong> <span id="modal-dog-sex">Female</span></p>
+                    </div>
+                </div>
+                
+                <input type="hidden" id="dog-id" name="dog-id">
+                <button type="submit" class="submit-btn">Submit Adoption Request</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="success-message" class="success-message">
+        <div class="success-content">
+            <i class="fas fa-check-circle"></i>
+            <h3>Adoption Request Submitted Successfully!</h3>
+            <p>Thank you for choosing to adopt. Our team will contact you within 24-48 hours to discuss the next steps.</p>
+            <button id="close-success">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Pawfect Match. All rights reserved. </p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
