@@ -9,7 +9,6 @@ let closeSuccess;
 
 let currentDogForAdoption = null;
 
-/* -------------------- LOAD DOGS -------------------- */
 async function loadDogs() {
     try {
         const response = await fetch('db.json');
@@ -23,7 +22,7 @@ async function loadDogs() {
     }
 }
 
-/* -------------------- FALLBACK DATA -------------------- */
+
 function getMockDogs() {
     return [
         {
@@ -117,7 +116,6 @@ function getMockDogs() {
     ];
 }
 
-/* -------------------- DISPLAY DOGS -------------------- */
 function displayDogs(dogsToDisplay) {
     dogsContainer.innerHTML = '';
     dogsToDisplay.forEach(dog => {
@@ -153,7 +151,6 @@ function createDogCard(dog) {
     return card;
 }
 
-/* -------------------- EVENTS -------------------- */
 document.addEventListener('DOMContentLoaded', () => {
     dogsContainer = document.getElementById('dogs-container');
     searchInput = document.getElementById('search-input');
@@ -200,7 +197,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-/* -------------------- DELEGATED CLICK -------------------- */
 document.addEventListener('click', e => {
     if (e.target.classList.contains('adopt-btn')) {
         const dogId = Number(e.target.dataset.id);
